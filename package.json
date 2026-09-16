@@ -1,0 +1,14 @@
+{
+  "name": "guest-registration",
+  "version": "1.0.0",
+  "description": "Partiful-style event page with name-only guest RSVP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
