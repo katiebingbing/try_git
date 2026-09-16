@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're Invited 🎉</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="cover">
+      <div class="cover-emoji">🎉</div>
+    </div>
+
+    <main class="card">
+      <p class="host">Hosted by Katie</p>
+      <h1 class="title">Guest Registration Party</h1>
+
+      <div class="detail-row">
+        <span class="detail-icon">📅</span>
+        <div>
+          <div class="detail-main">Saturday, October 4</div>
+          <div class="detail-sub">7:00 PM – 11:00 PM</div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-icon">📍</span>
+        <div>
+          <div class="detail-main">123 Party Lane</div>
+          <div class="detail-sub">Backyard &amp; patio, look for the balloons</div>
+        </div>
+      </div>
+
+      <p class="description">
+        Come hang out, bring good vibes, and let us know if you're in!
+        Just pop in your name below &mdash; no email or phone number needed.
+      </p>
+
+      <section class="rsvp-section">
+        <h2>Are you going?</h2>
+        <div class="rsvp-buttons" role="group" aria-label="RSVP response">
+          <button type="button" class="rsvp-btn yes" data-response="yes">
+            <span class="rsvp-emoji">🙌</span> Yes
+          </button>
+          <button type="button" class="rsvp-btn maybe" data-response="maybe">
+            <span class="rsvp-emoji">🤔</span> Maybe
+          </button>
+          <button type="button" class="rsvp-btn no" data-response="no">
+            <span class="rsvp-emoji">😢</span> Can't go
+          </button>
+        </div>
+
+        <form id="rsvp-form" class="rsvp-form hidden">
+          <label class="field">
+            <span>Your name</span>
+            <input type="text" id="name-input" name="name" placeholder="e.g. Jamie Lee" autocomplete="off" maxlength="60" required />
+          </label>
+
+          <label class="field guest-count-field hidden" id="guest-count-field">
+            <span>Total people in your group (including you)</span>
+            <input type="number" id="guest-count-input" name="guestCount" min="1" max="10" value="1" />
+          </label>
+
+          <div class="form-actions">
+            <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Confirm</button>
+          </div>
+          <p class="form-error hidden" id="form-error"></p>
+        </form>
+      </section>
+
+      <section class="guest-list-section">
+        <h2>Who's coming <span id="going-count">(0)</span></h2>
+        <ul class="guest-list" id="going-list"></ul>
+
+        <div class="guest-subsection" id="maybe-wrap">
+          <h3>Maybe <span id="maybe-count">(0)</span></h3>
+          <ul class="guest-list" id="maybe-list"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
